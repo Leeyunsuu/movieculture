@@ -1,12 +1,17 @@
-import Button from "./Button";
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
 
 function App() {
-	return (
-		<div className="App">
-			<h1>문제확인</h1>
-			<Button text={"hello"} />
-		</div>
-	);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/movie/:id" element={<Detail />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
