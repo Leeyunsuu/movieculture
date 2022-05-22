@@ -28,8 +28,6 @@ function Detail() {
     getmovieInfo();
   }, []);
 
-  console.log(movie);
-
   return (
     <div>
       <MovieDetail

@@ -25,9 +25,26 @@ function MovieDetail({
       </div>
       <div className={styles.backgroundPoster} />
       <div className={styles.mainContainer}>
-        <div className={styles.mainComponent}>hello</div>
-        <div className={styles.posterImage}>
-          <img src={medium_cover_image} alt={title} className={styles.poster} />
+        <div className={styles.mainComponent}>
+          <div className={styles.posterImage}>
+            <img
+              src={medium_cover_image}
+              alt={title}
+              className={styles.poster}
+            />
+          </div>
+          <div className={styles.infomation}>
+            <div className={styles.title}>{title}</div>
+            <div className={styles.genres}>
+              {genres &&
+                genres.map((g: string) => (
+                  <span className={styles.subtitle} key={g}>
+                    {g}
+                  </span>
+                ))}
+            </div>
+            <div className={styles.description}>{description_intro}</div>
+          </div>
         </div>
       </div>
     </div>
